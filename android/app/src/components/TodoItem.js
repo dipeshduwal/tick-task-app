@@ -1,6 +1,8 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+const priorityColors = {
+  Low: '#27ae60',
+  Medium: '#f39c12',
+  High: '#e74c3c',
+};
 
 const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
   return (
@@ -17,6 +19,10 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
         {todo.title}
       </Text>
 
+      <View style={[styles.priorityBadge, { backgroundColor: priorityColors[todo.priority] }]}>
+        <Text style={styles.priorityText}>{todo.priority}</Text>
+      </View>
+
       <TouchableOpacity onPress={() => deleteTodo(todo.id)} style={styles.deleteButton}>
         <Icon name="delete" size={24} color="#e74c3c" />
       </TouchableOpacity>
@@ -25,34 +31,15 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderRadius: 8,
-    backgroundColor: '#ffffff',
-    marginVertical: 4,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
-  },
-  checkbox: {
-    marginRight: 10,
-  },
-  text: {
-    flex: 1,
-    fontSize: 18,
-    color: '#333',
-  },
-  completed: {
-    textDecorationLine: 'line-through',
-    color: '#888',
-  },
-  deleteButton: {
+  // ... existing styles
+  priorityBadge: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 4,
     marginLeft: 10,
   },
+  priorityText: {
+    color: '#fff',
+    fontWeight: '600',
+  },
 });
-
-export default TodoItem;
