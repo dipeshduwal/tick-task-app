@@ -23,25 +23,27 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>To-Do List</Text>
+      <Text style={styles.header}>Your Tasks</Text>
       <AddTodo addTodo={addTodo} />
 
-      <Text style={styles.subHeader}>Incomplete</Text>
+      <Text style={styles.subHeader}>Incomplete Tasks</Text>
       <FlatList
         data={todos.filter(todo => !todo.completed)}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
           <TodoItem todo={item} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
         )}
+        ListEmptyComponent={<Text style={styles.emptyText}>All caught up! 🎉</Text>}
       />
 
-      <Text style={styles.subHeader}>Completed</Text>
+      <Text style={styles.subHeader}>Completed Tasks</Text>
       <FlatList
         data={todos.filter(todo => todo.completed)}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
           <TodoItem todo={item} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
         )}
+        ListEmptyComponent={<Text style={styles.emptyText}>No tasks completed yet.</Text>}
       />
     </View>
   );
@@ -51,16 +53,27 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+    backgroundColor: '#f4f7f9',
   },
   header: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16,
+    fontSize: 28,
+    fontWeight: '700',
+    color: '#333',
+    marginBottom: 10,
+    textAlign: 'center',
   },
   subHeader: {
     fontSize: 20,
+    fontWeight: '600',
+    color: '#444',
     marginTop: 20,
-    marginBottom: 8,
+    marginBottom: 10,
+  },
+  emptyText: {
+    textAlign: 'center',
+    color: '#888',
+    fontStyle: 'italic',
+    marginTop: 10,
   },
 });
 
