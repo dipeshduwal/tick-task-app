@@ -1,0 +1,1 @@
+/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/x86

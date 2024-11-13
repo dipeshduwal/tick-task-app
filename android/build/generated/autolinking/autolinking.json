@@ -1,6 +1,6 @@
 {
-  "root": "/home/codesavvy/repos/TickTaskApp",
-  "reactNativePath": "/home/codesavvy/repos/TickTaskApp/node_modules/react-native",
+  "root": "/home/codesavvy/repos/reactnative/tick-task-app",
+  "reactNativePath": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native",
   "reactNativeVersion": "0.76",
   "dependencies": {},
   "commands": [
@@ -160,7 +160,7 @@
         {
           "name": "--path <path>",
           "description": "Path to the React Native project root.",
-          "default": "/home/codesavvy/repos/TickTaskApp"
+          "default": "/home/codesavvy/repos/reactnative/tick-task-app"
         },
         {
           "name": "--platform <string>",
@@ -447,7 +447,7 @@
   "assets": [],
   "project": {
     "ios": {
-      "sourceDir": "/home/codesavvy/repos/TickTaskApp/ios",
+      "sourceDir": "/home/codesavvy/repos/reactnative/tick-task-app/ios",
       "xcodeProject": {
         "name": "TickTaskApp.xcodeproj",
         "path": ".",
@@ -456,7 +456,7 @@
       "assets": []
     },
     "android": {
-      "sourceDir": "/home/codesavvy/repos/TickTaskApp/android",
+      "sourceDir": "/home/codesavvy/repos/reactnative/tick-task-app/android",
       "appName": "app",
       "packageName": "com.ticktaskapp",
       "applicationId": "com.ticktaskapp",
