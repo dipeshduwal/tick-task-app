@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import AddTodo from '../components/AddTodo';
 import TodoItem from '../components/TodoItem';
+import { ProgressBar } from 'react-native-paper';
+
+const progress = todos.filter(todo => todo.completed).length / todos.length;
 
 const HomeScreen = () => {
   const [todos, setTodos] = useState([]);
@@ -23,6 +26,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
+    <ProgressBar progress={progress} color="#3498db" style={styles.progressBar} />;
       <Text style={styles.header}>Your Tasks</Text>
       <AddTodo addTodo={addTodo} />
 
