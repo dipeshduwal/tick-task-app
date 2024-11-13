@@ -7,9 +7,9 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
     <View style={styles.container}>
       <TouchableOpacity onPress={() => toggleTodo(todo.id)} style={styles.checkbox}>
         {todo.completed ? (
-          <Icon name="check-box" size={24} color="green" />
+          <Icon name="check-circle" size={24} color="#4CAF50" />
         ) : (
-          <Icon name="check-box-outline-blank" size={24} color="gray" />
+          <Icon name="radio-button-unchecked" size={24} color="#f39c12" />
         )}
       </TouchableOpacity>
 
@@ -18,7 +18,7 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
       </Text>
 
       <TouchableOpacity onPress={() => deleteTodo(todo.id)} style={styles.deleteButton}>
-        <Icon name="delete" size={24} color="red" />
+        <Icon name="delete" size={24} color="#e74c3c" />
       </TouchableOpacity>
     </View>
   );
@@ -28,9 +28,15 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 8,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    backgroundColor: '#ffffff',
+    marginVertical: 4,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
   },
   checkbox: {
     marginRight: 10,
@@ -38,6 +44,7 @@ const styles = StyleSheet.create({
   text: {
     flex: 1,
     fontSize: 18,
+    color: '#333',
   },
   completed: {
     textDecorationLine: 'line-through',
