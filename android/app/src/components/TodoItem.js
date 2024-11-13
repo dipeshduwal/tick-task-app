@@ -65,4 +65,9 @@ const styles = StyleSheet.create({
   completed: { textDecorationLine: 'line-through', color: '#aaa' },
   priorityBadge: { padding: 4, borderRadius: 4, marginLeft: 8 },
   priorityText: { color: '#fff' },
-  dueDate: { font
+  dueDate: { fontSize: 12, color: '#888', marginLeft: 8 },
+  editButton: { marginLeft: 8 },
+  deleteButton: { marginLeft: 8 },
+});
+
+export default TodoItem;
