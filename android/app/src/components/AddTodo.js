@@ -16,10 +16,11 @@ const AddTodo = ({ addTodo }) => {
       <TextInput
         style={styles.input}
         placeholder="Add new task..."
+        placeholderTextColor="#888"
         value={text}
         onChangeText={setText}
       />
-      <Button title="Add" onPress={handleAdd} />
+      <Button title="Add" onPress={handleAdd} color="#3498db" />
     </View>
   );
 };
@@ -28,14 +29,22 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     marginBottom: 16,
+    alignItems: 'center',
+    borderRadius: 8,
+    backgroundColor: '#fff',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
   },
   input: {
     flex: 1,
-    borderWidth: 1,
-    borderColor: '#ddd',
+    borderWidth: 0,
     padding: 8,
-    marginRight: 8,
-    borderRadius: 4,
+    fontSize: 16,
+    color: '#333',
   },
 });
 
