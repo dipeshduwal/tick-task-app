@@ -1,0 +1,7 @@
+# ninja log v5
+0	3	0	/home/codesavvy/repos/TickTaskApp/android/app/.cxx/Debug/1x216l30/x86_64/CMakeFiles/cmake.verify_globs	2495c80fabf283ea
+0	2411	1731474909619717380	CMakeFiles/appmodules.dir/home/codesavvy/repos/TickTaskApp/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	eb5aae7f335e3dc4
+1	2686	1731474909892718292	CMakeFiles/appmodules.dir/OnLoad.cpp.o	d3e46d53fc49f130
+2686	2922	1731474910137719102	/home/codesavvy/repos/TickTaskApp/android/app/build/intermediates/cxx/Debug/1x216l30/obj/x86_64/libappmodules.so	99f11879959ed8a0
+0	8	0	/home/codesavvy/repos/TickTaskApp/android/app/.cxx/Debug/1x216l30/x86_64/CMakeFiles/cmake.verify_globs	2495c80fabf283ea
+1	97	0	/home/codesavvy/repos/TickTaskApp/android/app/.cxx/Debug/1x216l30/x86_64/CMakeFiles/cmake.verify_globs	2495c80fabf283ea

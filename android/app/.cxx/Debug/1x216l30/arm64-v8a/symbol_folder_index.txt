@@ -1,0 +1,1 @@
+/home/codesavvy/repos/TickTaskApp/android/app/build/intermediates/cxx/Debug/1x216l30/obj/arm64-v8a
