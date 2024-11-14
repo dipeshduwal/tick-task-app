@@ -1,6 +1,7 @@
 {
   "buildFiles": [
     "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-community/datetimepicker/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-picker/picker/android/src/main/jni/CMakeLists.txt",
     "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
   ],
@@ -34,9 +35,20 @@
       "abi": "x86",
       "output": "/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/x86/libappmodules.so",
       "runtimeFiles": [
+        "/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/x86/libreact_codegen_rnpicker.so",
         "/home/codesavvy/.gradle/caches/8.10.2/transforms/6dc174b9394f7f2da85e384b4bbf0f4a/transformed/jetified-fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
         "/home/codesavvy/.gradle/caches/8.10.2/transforms/095f498f1545b2a557a515b33db49b37/transformed/jetified-react-android-0.76.1-debug/prefab/modules/jsi/libs/android.x86/libjsi.so",
         "/home/codesavvy/.gradle/caches/8.10.2/transforms/095f498f1545b2a557a515b33db49b37/transformed/jetified-react-android-0.76.1-debug/prefab/modules/reactnative/libs/android.x86/libreactnative.so"
+      ]
+    },
+    "react_codegen_rnpicker::@e8bb2e9e833f47d0d516": {
+      "artifactName": "react_codegen_rnpicker",
+      "abi": "x86",
+      "output": "/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/x86/libreact_codegen_rnpicker.so",
+      "runtimeFiles": [
+        "/home/codesavvy/.gradle/caches/8.10.2/transforms/095f498f1545b2a557a515b33db49b37/transformed/jetified-react-android-0.76.1-debug/prefab/modules/reactnative/libs/android.x86/libreactnative.so",
+        "/home/codesavvy/.gradle/caches/8.10.2/transforms/095f498f1545b2a557a515b33db49b37/transformed/jetified-react-android-0.76.1-debug/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/home/codesavvy/.gradle/caches/8.10.2/transforms/6dc174b9394f7f2da85e384b4bbf0f4a/transformed/jetified-fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so"
       ]
     }
   }
