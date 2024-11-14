@@ -36,12 +36,13 @@ const HomeScreen = () => {
     );
   });
 
-  const progress = todos.length ? Math.round((todos.filter(todo => todo.completed).length / todos.length) * 100) / 100 : 0;
+  // Use `toFixed(2)` to limit precision errors and then convert to number
+    const progress = todos.length ? Number(((todos.filter(todo => todo.completed).length / todos.length) * 100).toFixed(2)) / 100 : 0;
 
   return (
     <View style={styles.container}>
       <Text style={styles.appTitle}>Tick Task App</Text>
-      <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that”</Text>
+      <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that.   - Kita Shinsuke”</Text>
       <Text style={styles.header}>To-Do Lists</Text>
       <ProgressBar progress={progress} color="#3498db" style={styles.progressBar} />
 
@@ -71,15 +72,14 @@ const HomeScreen = () => {
       </View>
 
       <FlatList
-        data={filteredTodos}
-        keyExtractor={(item) => item.id.toString()}
-        horizontal={true}
-        renderItem={({ item }) => (
-          <ScrollView horizontal>
-            <TodoItem todo={item} toggleTodo={toggleTodo} deleteTodo={deleteTodo} updateTodo={updateTodo} />
-          </ScrollView>
-        )}
-        showsHorizontalScrollIndicator={false}
+              data={filteredTodos}
+              keyExtractor={(item) => item.id.toString()}
+              renderItem={({ item }) => (
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                  <TodoItem todo={item} toggleTodo={toggleTodo} deleteTodo={deleteTodo} updateTodo={updateTodo} />
+                </ScrollView>
+              )}
+              showsVerticalScrollIndicator={false}
       />
     </View>
   );
@@ -96,11 +96,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   quote: {
-    fontSize: 14,
+    fontSize: 16,
     color: 'grey',
     fontStyle: 'italic',
     textAlign: 'center',
-    marginBottom: 10,
+    marginBottom: 20,
   },
   header: { fontSize: 24, fontWeight: 'bold', color: '#333', marginBottom: 10 },
   progressBar: { height: 10, marginBottom: 10 },

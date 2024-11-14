@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
   deleteButton: { marginLeft: 8 },
   modalOverlay: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)' },
   modalContainer: {
-    width: 200,
-    height: 200,
+    width: 270,
+    height: 150,
     backgroundColor: '#fff',
     borderRadius: 10,
     padding: 16,
