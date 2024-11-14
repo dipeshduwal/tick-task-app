@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet, Switch } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Switch, Text } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
@@ -72,7 +72,9 @@ const AddTodo = ({ addTodo }) => {
 };
 
 const styles = StyleSheet.create({
-  // existing styles
+  container: { flexDirection: 'column', padding: 16, backgroundColor: '#fff', borderRadius: 8, marginBottom: 16 },
+  input: { marginBottom: 8, padding: 8, borderBottomWidth: 1, borderBottomColor: '#ddd', color: '#333' },
+  picker: { height: 50, width: '100%', marginVertical: 8 },
   reminderContainer: { flexDirection: 'row', alignItems: 'center', marginVertical: 10 },
   reminderText: { marginLeft: 8, fontSize: 16, color: '#333' },
 });
