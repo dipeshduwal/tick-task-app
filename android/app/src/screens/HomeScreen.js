@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, FlatList, StyleSheet } from 'react-native';
-import AddTodo from './AddTodo';
-import TodoItem from './TodoItem';
+import AddTodo from '../components/AddTodo';
+import TodoItem from '../components/TodoItem';
 import { ProgressBar } from 'react-native-paper';
 
 const HomeScreen = () => {
