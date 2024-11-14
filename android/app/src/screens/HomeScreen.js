@@ -42,7 +42,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>To-Do Lists</Text>
+      <Text style={styles.header}>To-Do List</Text>
       <ProgressBar progress={progress} color="#3498db" style={styles.progressBar} />
 
       <TextInput
@@ -78,7 +78,10 @@ const HomeScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  // existing styles
+  container: { flex: 1, padding: 16, backgroundColor: '#fff' },
+  header: { fontSize: 24, fontWeight: 'bold', marginBottom: 16, color: '#333' },
+  progressBar: { height: 8, marginBottom: 16 },
+  search: { padding: 8, borderBottomWidth: 1, borderBottomColor: '#ddd', marginBottom: 16 },
   sortContainer: { flexDirection: 'row', justifyContent: 'space-around', marginBottom: 10 },
   sortLabel: { fontSize: 16, color: '#333' },
   sortOption: { fontSize: 16, color: '#3498db' },
