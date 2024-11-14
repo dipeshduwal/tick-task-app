@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, FlatList, StyleSheet } from 'react-native';
+import { View, Text, TextInput, FlatList, StyleSheet, ScrollView } from 'react-native';
 import AddTodo from '../components/AddTodo';
 import TodoItem from '../components/TodoItem';
 import { ProgressBar } from 'react-native-paper';
@@ -41,6 +41,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.appTitle}>Tick Task App</Text>
+      <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that”</Text>
       <Text style={styles.header}>To-Do Lists</Text>
       <ProgressBar progress={progress} color="#3498db" style={styles.progressBar} />
 
@@ -72,9 +73,13 @@ const HomeScreen = () => {
       <FlatList
         data={filteredTodos}
         keyExtractor={(item) => item.id.toString()}
+        horizontal={true}
         renderItem={({ item }) => (
-          <TodoItem todo={item} toggleTodo={toggleTodo} deleteTodo={deleteTodo} updateTodo={updateTodo} />
+          <ScrollView horizontal>
+            <TodoItem todo={item} toggleTodo={toggleTodo} deleteTodo={deleteTodo} updateTodo={updateTodo} />
+          </ScrollView>
         )}
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );
@@ -88,7 +93,14 @@ const styles = StyleSheet.create({
     color: '#8e44ad',
     fontFamily: 'Cochin',
     textAlign: 'center',
-    marginBottom: 5,
+    marginBottom: 10,
+  },
+  quote: {
+    fontSize: 14,
+    color: 'grey',
+    fontStyle: 'italic',
+    textAlign: 'center',
+    marginBottom: 10,
   },
   header: { fontSize: 24, fontWeight: 'bold', color: '#333', marginBottom: 10 },
   progressBar: { height: 10, marginBottom: 10 },
