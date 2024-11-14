@@ -75,8 +75,18 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }) => {
 };
 
 const styles = StyleSheet.create({
-  // existing styles
+  container: { flexDirection: 'row', alignItems: 'center', marginBottom: 10 },
+  checkbox: { marginRight: 8 },
+  text: { fontSize: 18, color: '#333' },
+  completed: { textDecorationLine: 'line-through', color: '#aaa' },
+  priorityBadge: { padding: 4, borderRadius: 4, marginLeft: 8 },
+  priorityText: { color: '#fff' },
+  dueDate: { fontSize: 12, color: '#888', marginLeft: 8 },
   daysLeft: { fontSize: 12, color: '#e74c3c', marginLeft: 8 },
+  editButton: { marginLeft: 8 },
+  deleteButton: { marginLeft: 8 },
+  input: { padding: 8, borderBottomWidth: 1, borderBottomColor: '#ddd', color: '#333' },
+  modalButtons: { flexDirection: 'row', justifyContent: 'space-around', marginTop: 10 },
 });
 
 export default TodoItem;
