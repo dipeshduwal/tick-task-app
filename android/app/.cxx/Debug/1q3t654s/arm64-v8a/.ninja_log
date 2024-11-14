@@ -1,5 +1,8 @@
 # ninja log v5
-1	7	0	/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/arm64-v8a/CMakeFiles/cmake.verify_globs	44b945f5b0b67311
+78	105	0	/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/arm64-v8a/CMakeFiles/cmake.verify_globs	44b945f5b0b67311
 0	19776	1731484393884157244	CMakeFiles/appmodules.dir/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	5b862b6b56124f13
-0	20665	1731484394749162056	CMakeFiles/appmodules.dir/OnLoad.cpp.o	2bfd67080bfd73e9
 20665	21622	1731484395731167517	/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/arm64-v8a/libappmodules.so	2c30ca9e45b32ce9
+0	20665	1731484394749162056	CMakeFiles/appmodules.dir/OnLoad.cpp.o	2bfd67080bfd73e9
+106	463	1731491196293538852	build.ninja	b2645eb31b86ffcd
+1	9	0	/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/arm64-v8a/CMakeFiles/cmake.verify_globs	44b945f5b0b67311
+0	55	0	clean	d001b1ba986fc7a3

@@ -108,6 +108,13 @@ android {
 }
 
 dependencies {
+    implementation(project(':react-native-push-notification')) {
+        exclude group: 'com.google.android.gms'
+        exclude group: 'com.android.support'
+    }
+    implementation(project(':react-native-vector-icons')) {
+        exclude group: 'com.android.support'
+    }
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
@@ -117,3 +124,9 @@ dependencies {
         implementation jscFlavor
     }
 }
+
+configurations.all {
+    resolutionStrategy.force 'androidx.core:core:1.9.0'
+}
+
+

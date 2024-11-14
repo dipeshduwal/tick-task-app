@@ -2,7 +2,77 @@
   "root": "/home/codesavvy/repos/reactnative/tick-task-app",
   "reactNativePath": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native",
   "reactNativeVersion": "0.76",
-  "dependencies": {},
+  "dependencies": {
+    "@react-native-community/datetimepicker": {
+      "root": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-community/datetimepicker",
+      "name": "@react-native-community/datetimepicker",
+      "platforms": {
+        "ios": {
+          "podspecPath": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-community/datetimepicker/RNDateTimePicker.podspec",
+          "version": "8.2.0",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-community/datetimepicker/android",
+          "packageImportPath": "import com.reactcommunity.rndatetimepicker.RNDateTimePickerPackage;",
+          "packageInstance": "new RNDateTimePickerPackage()",
+          "buildTypes": [],
+          "libraryName": "RNDateTimePickerCGen",
+          "componentDescriptors": [],
+          "cmakeListsPath": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-community/datetimepicker/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
+    "react-native-push-notification": {
+      "root": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-push-notification",
+      "name": "react-native-push-notification",
+      "platforms": {
+        "ios": null,
+        "android": {
+          "sourceDir": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-push-notification/android",
+          "packageImportPath": "import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;",
+          "packageInstance": "new ReactNativePushNotificationPackage()",
+          "buildTypes": [],
+          "componentDescriptors": [],
+          "cmakeListsPath": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-push-notification/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
+    "react-native-vector-icons": {
+      "root": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-vector-icons",
+      "name": "react-native-vector-icons",
+      "platforms": {
+        "ios": {
+          "podspecPath": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-vector-icons/RNVectorIcons.podspec",
+          "version": "10.2.0",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-vector-icons/android",
+          "packageImportPath": "import com.oblador.vectoricons.VectorIconsPackage;",
+          "packageInstance": "new VectorIconsPackage()",
+          "buildTypes": [],
+          "libraryName": "RNVectorIconsSpec",
+          "componentDescriptors": [],
+          "cmakeListsPath": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    }
+  },
   "commands": [
     {
       "name": "bundle",
