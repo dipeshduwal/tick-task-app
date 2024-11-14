@@ -17,13 +17,6 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }) => {
     setIsEditing(false);
   };
 
-  const calculateDaysLeft = () => {
-    const due = new Date(todo.dueDate);
-    const today = new Date();
-    const diff = Math.ceil((due - today) / (1000 * 60 * 60 * 24));
-    return diff >= 0 ? `${diff} days left` : `Overdue by ${Math.abs(diff)} days`;
-  };
-
   return (
     <>
       <View style={styles.container}>
@@ -44,7 +37,6 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }) => {
         </View>
 
         <Text style={styles.dueDate}>Due: {todo.dueDate.toLocaleDateString()}</Text>
-        <Text style={styles.daysLeft}>{calculateDaysLeft()}</Text>
 
         <TouchableOpacity onPress={() => setIsEditing(true)} style={styles.editButton}>
           <Icon name="edit" size={24} color="#3498db" />
@@ -56,17 +48,21 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }) => {
       </View>
 
       {isEditing && (
-        <Modal>
-          <TextInput
-            style={styles.input}
-            placeholder="Edit task..."
-            placeholderTextColor="#888"
-            value={newTitle}
-            onChangeText={setNewTitle}
-          />
-          <View style={styles.modalButtons}>
-            <Button title="Save" onPress={handleEdit} color="#4CAF50" />
-            <Button title="Cancel" onPress={() => setIsEditing(false)} color="#e74c3c" />
+        <Modal transparent={true} animationType="slide">
+          <View style={styles.modalOverlay}>
+            <View style={styles.modalContainer}>
+              <TextInput
+                style={styles.input}
+                placeholder="Edit task..."
+                placeholderTextColor="#888"
+                value={newTitle}
+                onChangeText={setNewTitle}
+              />
+              <View style={styles.modalButtons}>
+                <Button title="Save" onPress={handleEdit} color="#4CAF50" />
+                <Button title="Cancel" onPress={() => setIsEditing(false)} color="#e74c3c" />
+              </View>
+            </View>
           </View>
         </Modal>
       )}
@@ -82,11 +78,20 @@ const styles = StyleSheet.create({
   priorityBadge: { padding: 4, borderRadius: 4, marginLeft: 8 },
   priorityText: { color: '#fff' },
   dueDate: { fontSize: 12, color: '#888', marginLeft: 8 },
-  daysLeft: { fontSize: 12, color: '#e74c3c', marginLeft: 8 },
   editButton: { marginLeft: 8 },
   deleteButton: { marginLeft: 8 },
-  input: { padding: 8, borderBottomWidth: 1, borderBottomColor: '#ddd', color: '#333' },
-  modalButtons: { flexDirection: 'row', justifyContent: 'space-around', marginTop: 10 },
+  modalOverlay: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)' },
+  modalContainer: {
+    width: 200,
+    height: 200,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    padding: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  input: { backgroundColor: '#f9f9f9', padding: 10, borderRadius: 5, width: '100%', color: '#333', marginBottom: 10 },
+  modalButtons: { flexDirection: 'row', justifyContent: 'space-between', width: '100%' },
 });
 
 export default TodoItem;
