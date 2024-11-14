@@ -48,10 +48,20 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }) => {
       </View>
 
       {isEditing && (
-        <Modal>
-          <TextInput value={newTitle} onChangeText={setNewTitle} />
-          <Button title="Save" onPress={handleEdit} />
-          <Button title="Cancel" onPress={() => setIsEditing(false)} />
+        <Modal transparent={true} animationType="slide">
+          <View style={styles.modalContainer}>
+            <TextInput
+              style={styles.input}
+              placeholder="Edit task..."
+              placeholderTextColor="#888"
+              value={newTitle}
+              onChangeText={setNewTitle}
+            />
+            <View style={styles.modalButtons}>
+              <Button title="Save" onPress={handleEdit} color="#4CAF50" />
+              <Button title="Cancel" onPress={() => setIsEditing(false)} color="#e74c3c" />
+            </View>
+          </View>
         </Modal>
       )}
     </>
@@ -68,6 +78,9 @@ const styles = StyleSheet.create({
   dueDate: { fontSize: 12, color: '#888', marginLeft: 8 },
   editButton: { marginLeft: 8 },
   deleteButton: { marginLeft: 8 },
+  modalContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)' },
+  input: { backgroundColor: '#fff', padding: 10, borderRadius: 8, width: '80%', marginBottom: 10, color: '#333' },
+  modalButtons: { flexDirection: 'row', justifyContent: 'space-between', width: '60%', marginTop: 10 },
 });
 
 export default TodoItem;
