@@ -2,6 +2,8 @@
   "buildFiles": [
     "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-community/datetimepicker/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-picker/picker/android/src/main/jni/CMakeLists.txt",
+    "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
+    "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
     "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
   ],
@@ -25,6 +27,26 @@
       "abi": "x86_64",
       "runtimeFiles": []
     },
+    "react_codegen_safeareacontext::@7984cd80db47aa7b952a": {
+      "artifactName": "react_codegen_safeareacontext",
+      "abi": "x86_64",
+      "output": "/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/x86_64/libreact_codegen_safeareacontext.so",
+      "runtimeFiles": [
+        "/home/codesavvy/.gradle/caches/8.10.2/transforms/6dc174b9394f7f2da85e384b4bbf0f4a/transformed/jetified-fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86_64/libfbjni.so",
+        "/home/codesavvy/.gradle/caches/8.10.2/transforms/095f498f1545b2a557a515b33db49b37/transformed/jetified-react-android-0.76.1-debug/prefab/modules/jsi/libs/android.x86_64/libjsi.so",
+        "/home/codesavvy/.gradle/caches/8.10.2/transforms/095f498f1545b2a557a515b33db49b37/transformed/jetified-react-android-0.76.1-debug/prefab/modules/reactnative/libs/android.x86_64/libreactnative.so"
+      ]
+    },
+    "react_codegen_rnscreens::@25bcbd507e98d3a854ad": {
+      "artifactName": "react_codegen_rnscreens",
+      "abi": "x86_64",
+      "output": "/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/x86_64/libreact_codegen_rnscreens.so",
+      "runtimeFiles": [
+        "/home/codesavvy/.gradle/caches/8.10.2/transforms/095f498f1545b2a557a515b33db49b37/transformed/jetified-react-android-0.76.1-debug/prefab/modules/reactnative/libs/android.x86_64/libreactnative.so",
+        "/home/codesavvy/.gradle/caches/8.10.2/transforms/095f498f1545b2a557a515b33db49b37/transformed/jetified-react-android-0.76.1-debug/prefab/modules/jsi/libs/android.x86_64/libjsi.so",
+        "/home/codesavvy/.gradle/caches/8.10.2/transforms/6dc174b9394f7f2da85e384b4bbf0f4a/transformed/jetified-fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86_64/libfbjni.so"
+      ]
+    },
     "react_codegen_RNDateTimePickerCGen::@59b70ddc31ba2f8ef1d2": {
       "artifactName": "react_codegen_RNDateTimePickerCGen",
       "abi": "x86_64",
@@ -36,6 +58,8 @@
       "output": "/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/x86_64/libappmodules.so",
       "runtimeFiles": [
         "/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/x86_64/libreact_codegen_rnpicker.so",
+        "/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/x86_64/libreact_codegen_safeareacontext.so",
+        "/home/codesavvy/repos/reactnative/tick-task-app/android/app/build/intermediates/cxx/Debug/1q3t654s/obj/x86_64/libreact_codegen_rnscreens.so",
         "/home/codesavvy/.gradle/caches/8.10.2/transforms/6dc174b9394f7f2da85e384b4bbf0f4a/transformed/jetified-fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86_64/libfbjni.so",
         "/home/codesavvy/.gradle/caches/8.10.2/transforms/095f498f1545b2a557a515b33db49b37/transformed/jetified-react-android-0.76.1-debug/prefab/modules/jsi/libs/android.x86_64/libjsi.so",
         "/home/codesavvy/.gradle/caches/8.10.2/transforms/095f498f1545b2a557a515b33db49b37/transformed/jetified-react-android-0.76.1-debug/prefab/modules/reactnative/libs/android.x86_64/libreactnative.so"

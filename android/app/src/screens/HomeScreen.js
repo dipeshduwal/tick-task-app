@@ -85,4 +85,12 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: '#f5f5f5' },
-  header:
+  header: { fontSize: 24, fontWeight: 'bold', color: '#333', marginBottom: 10 },
+  progressBar: { height: 10, marginBottom: 10 },
+  search: { padding: 10, backgroundColor: '#fff', borderRadius: 8, marginBottom: 10, color: 'black', placeholderTextColor: 'grey' },
+  filterContainer: { flexDirection: 'row', justifyContent: 'space-around', marginBottom: 10 },
+  filterText: { fontSize: 16, color: '#3498db' },
+  activeFilter: { fontWeight: 'bold', color: '#1abc9c' }
+});
+
+export default HomeScreen;
