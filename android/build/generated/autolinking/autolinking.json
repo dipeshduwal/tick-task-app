@@ -28,6 +28,34 @@
         }
       }
     },
+    "@react-native-picker/picker": {
+      "root": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-picker/picker",
+      "name": "@react-native-picker/picker",
+      "platforms": {
+        "ios": {
+          "podspecPath": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-picker/picker/RNCPicker.podspec",
+          "version": "2.9.0",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-picker/picker/android",
+          "packageImportPath": "import com.reactnativecommunity.picker.RNCPickerPackage;",
+          "packageInstance": "new RNCPickerPackage()",
+          "buildTypes": [],
+          "libraryName": "rnpicker",
+          "componentDescriptors": [
+            "RNCAndroidDialogPickerComponentDescriptor",
+            "RNCAndroidDropdownPickerComponentDescriptor"
+          ],
+          "cmakeListsPath": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/@react-native-picker/picker/android/src/main/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
     "react-native-push-notification": {
       "root": "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-push-notification",
       "name": "react-native-push-notification",

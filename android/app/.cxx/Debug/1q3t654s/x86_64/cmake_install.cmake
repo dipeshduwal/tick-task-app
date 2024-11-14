@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/x86_64/RNDateTimePickerCGen_autolinked_build/cmake_install.cmake")
+  include("/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/x86_64/rnpicker_autolinked_build/cmake_install.cmake")
   include("/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/x86_64/RNVectorIconsSpec_autolinked_build/cmake_install.cmake")
 
 endif()
