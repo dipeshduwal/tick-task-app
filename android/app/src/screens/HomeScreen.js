@@ -37,12 +37,10 @@ const HomeScreen = () => {
   });
 
   // Use `toFixed(2)` to limit precision errors and then convert to number
-    const progress = todos.length ? Number(((todos.filter(todo => todo.completed).length / todos.length) * 100).toFixed(2)) / 100 : 0;
+  const progress = todos.length ? Number(((todos.filter(todo => todo.completed).length / todos.length) * 100).toFixed(2)) / 100 : 0;
 
   return (
     <View style={styles.container}>
-      <Text style={styles.appTitle}>Tick Task App</Text>
-      <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that.   - Kita Shinsuke”</Text>
       <Text style={styles.header}>To-Do Lists</Text>
       <ProgressBar progress={progress} color="#3498db" style={styles.progressBar} />
 
@@ -72,14 +70,14 @@ const HomeScreen = () => {
       </View>
 
       <FlatList
-              data={filteredTodos}
-              keyExtractor={(item) => item.id.toString()}
-              renderItem={({ item }) => (
-                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                  <TodoItem todo={item} toggleTodo={toggleTodo} deleteTodo={deleteTodo} updateTodo={updateTodo} />
-                </ScrollView>
-              )}
-              showsVerticalScrollIndicator={false}
+        data={filteredTodos}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <TodoItem todo={item} toggleTodo={toggleTodo} deleteTodo={deleteTodo} updateTodo={updateTodo} />
+          </ScrollView>
+        )}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );
@@ -87,27 +85,4 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: '#f5f5f5' },
-  appTitle: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#8e44ad',
-    fontFamily: 'Cochin',
-    textAlign: 'center',
-    marginBottom: 10,
-  },
-  quote: {
-    fontSize: 16,
-    color: 'grey',
-    fontStyle: 'italic',
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  header: { fontSize: 24, fontWeight: 'bold', color: '#333', marginBottom: 10 },
-  progressBar: { height: 10, marginBottom: 10 },
-  search: { padding: 10, backgroundColor: '#fff', borderRadius: 8, marginBottom: 10, color: 'black', placeholderTextColor: 'grey' },
-  filterContainer: { flexDirection: 'row', justifyContent: 'space-around', marginBottom: 10 },
-  filterText: { fontSize: 16, color: '#3498db' },
-  activeFilter: { fontWeight: 'bold', color: '#1abc9c' }
-});
-
-export default HomeScreen;
+  header:
