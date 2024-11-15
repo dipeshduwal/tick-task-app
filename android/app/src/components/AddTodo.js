@@ -53,7 +53,7 @@ const AddTodo = ({ addTodo }) => {
         />
       )}
       <View style={styles.addButtonContainer}>
-        <Button title="Add" onPress={handleAdd} color="#00ab41" />
+        <Button title="Add Task" onPress={handleAdd} color="#3498db" />
       </View>
     </View>
   );
@@ -73,18 +73,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 8,
+    marginBottom: 10,
   },
   label: { fontSize: 16, color: '#333', marginRight: 10 },
   picker: {
-    height: 50,
+    height: 45,
     width: 150,
     backgroundColor: '#D3D3D3',
     borderRadius: 8,
-    paddingHorizontal: 8,
-    paddingVertical: 5,
     justifyContent: 'center',
   },
-  pickerItem: { fontSize: 16, color: '#333' },
+  pickerItem: {
+    height: 45,
+    fontSize: 16,
+    color: '#333',
+    textAlign: 'center',
+  },
   addButtonContainer: { marginTop: 10 },
 });
 

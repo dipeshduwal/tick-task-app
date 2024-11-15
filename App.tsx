@@ -15,7 +15,7 @@ function App(): React.JSX.Element {
 
         <View style={styles.headerContainer}>
           <Text style={styles.appTitle}>Tick Task App</Text>
-          <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that.”   - Kita Shinsuke</Text>
+          <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that.” - Kita Shinsuke</Text>
         </View>
 
         <Tab.Navigator
@@ -24,6 +24,7 @@ function App(): React.JSX.Element {
             tabBarLabelStyle: styles.tabLabel,
             tabBarActiveBackgroundColor: '#d3d3d3',
             tabBarInactiveBackgroundColor: '#ffffff',
+            tabBarStyle: styles.tabBar,
             tabBarIcon: () => null, // Explicitly remove the icon
           })}
         >
@@ -38,16 +39,16 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   headerContainer: {
     backgroundColor: '#f7f1e1',
-    padding: 20,
+    padding: 10,
   },
   appTitle: {
-    fontSize: 30,
+    fontSize: 28,
     fontWeight: 'bold',
-    color: '#0a2472',
+    color: '#24a0ed',
     fontFamily: 'Cochin',
     textAlign: 'center',
     marginBottom: 10,
-    marginTop: 10,
+    marginTop: 5,
   },
   quote: {
     fontSize: 15,
@@ -59,7 +60,12 @@ const styles = StyleSheet.create({
   tabLabel: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#0a2472',
+    color: '#24a0ed',
+    textAlign: 'center',
+  },
+  tabBar: {
+    height: 60,
+    justifyContent: 'center',
   },
 });
 
