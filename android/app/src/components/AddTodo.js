@@ -32,6 +32,7 @@ const AddTodo = ({ addTodo }) => {
         <Picker
           selectedValue={priority}
           style={styles.picker}
+          itemStyle={styles.pickerItem}
           onValueChange={(itemValue) => setPriority(itemValue)}
         >
           <Picker.Item label="Low" value="Low" />
@@ -52,7 +53,7 @@ const AddTodo = ({ addTodo }) => {
         />
       )}
       <View style={styles.addButtonContainer}>
-        <Button title="Add" onPress={handleAdd} color="#3498db" />
+        <Button title="Add" onPress={handleAdd} color="#00ab41" />
       </View>
     </View>
   );
@@ -71,10 +72,19 @@ const styles = StyleSheet.create({
   priorityContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 8
+    marginVertical: 8,
   },
   label: { fontSize: 16, color: '#333', marginRight: 10 },
-  picker: { height: 50, width: 150, color: '#333' },
+  picker: {
+    height: 50,
+    width: 150,
+    backgroundColor: '#D3D3D3',
+    borderRadius: 8,
+    paddingHorizontal: 8,
+    paddingVertical: 5,
+    justifyContent: 'center',
+  },
+  pickerItem: { fontSize: 16, color: '#333' },
   addButtonContainer: { marginTop: 10 },
 });
 
