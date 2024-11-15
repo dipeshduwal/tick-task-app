@@ -21,10 +21,10 @@ function App(): React.JSX.Element {
         <Tab.Navigator
           screenOptions={({ route }) => ({
             headerShown: false,
-            tabBarShowIcon: false, 
             tabBarLabelStyle: styles.tabLabel,
             tabBarActiveBackgroundColor: '#d3d3d3',
             tabBarInactiveBackgroundColor: '#ffffff',
+            tabBarIcon: () => null, // Explicitly remove the icon
           })}
         >
           <Tab.Screen name="To-Do Lists" component={HomeScreen} />
