@@ -19,7 +19,13 @@ function App(): React.JSX.Element {
         </View>
 
         <Tab.Navigator
-          screenOptions={{ headerShown: false }}
+          screenOptions={({ route }) => ({
+            headerShown: false,
+            tabBarShowIcon: false, 
+            tabBarLabelStyle: styles.tabLabel,
+            tabBarActiveBackgroundColor: '#d3d3d3',
+            tabBarInactiveBackgroundColor: '#ffffff',
+          })}
         >
           <Tab.Screen name="To-Do Lists" component={HomeScreen} />
           <Tab.Screen name="Timer" component={TimerScreen} />
@@ -49,6 +55,11 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     textAlign: 'center',
     marginBottom: 5,
+  },
+  tabLabel: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#0a2472',
   },
 });
 

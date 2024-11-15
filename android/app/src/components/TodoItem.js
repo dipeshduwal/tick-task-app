@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   dueDate: { fontSize: 12, color: '#888', marginLeft: 8 },
   editButton: { marginLeft: 8 },
   deleteButton: { marginLeft: 8 },
-  modalOverlay: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)' },
+  modalOverlay: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.7)' },
   modalContainer: {
     width: 270,
     height: 150,
