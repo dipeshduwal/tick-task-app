@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, Text } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './android/app/src/screens/HomeScreen';
@@ -12,8 +12,11 @@ function App(): React.JSX.Element {
     <NavigationContainer>
       <SafeAreaView style={{ flex: 1 }}>
         <StatusBar barStyle="dark-content" />
-        <Text style={styles.appTitle}>Tick Task App</Text>
-        <Text style={styles.quote}>“Habits are the compound interest of self-improvement.”</Text>
+
+        <View style={styles.headerContainer}>
+          <Text style={styles.appTitle}>Tick Task App</Text>
+          <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that.   - Kita Shinsuke”</Text>
+        </View>
 
         <Tab.Navigator
           screenOptions={{ headerShown: false }}
@@ -27,19 +30,25 @@ function App(): React.JSX.Element {
 }
 
 const styles = StyleSheet.create({
+  headerContainer: {
+    backgroundColor: '#f7f1e1',
+    padding: 20,
+  },
   appTitle: {
-    fontSize: 32,
+    fontSize: 30,
     fontWeight: 'bold',
-    color: '#8e44ad',
+    color: '#d1c2b8',
     fontFamily: 'Cochin',
     textAlign: 'center',
-    marginBottom: 5,
+    marginBottom: 10,
+    marginTop: 20,
   },
   quote: {
-    fontSize: 14,
+    fontSize: 15,
     color: 'grey',
+    fontStyle: 'italic',
     textAlign: 'center',
-    marginBottom: 20,
+    marginBottom: 10,
   },
 });
 
