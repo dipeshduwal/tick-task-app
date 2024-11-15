@@ -12,7 +12,8 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					],
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
@@ -68,7 +69,7 @@
 					"source" : "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-safe-area-context/android/src/main/jni",
 					"targetIndexes" : 
 					[
-						5
+						6
 					]
 				},
 				{
@@ -84,6 +85,21 @@
 					"targetIndexes" : 
 					[
 						4
+					]
+				},
+				{
+					"build" : "rnsvg_autolinked_build",
+					"jsonFile" : "directory-rnsvg_autolinked_build-Debug-cbbf4787b34881dcb392.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni",
+					"targetIndexes" : 
+					[
+						5
 					]
 				},
 				{
@@ -113,7 +129,8 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					],
 					"name" : "appmodules",
 					"targetIndexes" : 
@@ -123,7 +140,8 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					]
 				}
 			],
@@ -132,42 +150,49 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appmodules::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appmodules-Debug-04237ca9092a19b8dbb1.json",
+					"jsonFile" : "target-appmodules-Debug-001646ea21c052b4ebd9.json",
 					"name" : "appmodules",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "react_codegen_RNDateTimePickerCGen::@59b70ddc31ba2f8ef1d2",
-					"jsonFile" : "target-react_codegen_RNDateTimePickerCGen-Debug-82167ac2a4544cf27d22.json",
+					"jsonFile" : "target-react_codegen_RNDateTimePickerCGen-Debug-593b3202bb9e3c164201.json",
 					"name" : "react_codegen_RNDateTimePickerCGen",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 5,
+					"directoryIndex" : 6,
 					"id" : "react_codegen_RNVectorIconsSpec::@479809fae146501fd34d",
-					"jsonFile" : "target-react_codegen_RNVectorIconsSpec-Debug-5d84c3dafd869bd5e846.json",
+					"jsonFile" : "target-react_codegen_RNVectorIconsSpec-Debug-d47b639c81734df43004.json",
 					"name" : "react_codegen_RNVectorIconsSpec",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "react_codegen_rnpicker::@e8bb2e9e833f47d0d516",
-					"jsonFile" : "target-react_codegen_rnpicker-Debug-389b65886791a1bd5325.json",
+					"jsonFile" : "target-react_codegen_rnpicker-Debug-0ad4835d51f09a15c566.json",
 					"name" : "react_codegen_rnpicker",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "react_codegen_rnscreens::@25bcbd507e98d3a854ad",
-					"jsonFile" : "target-react_codegen_rnscreens-Debug-ef965f847f4efb4bcc0d.json",
+					"jsonFile" : "target-react_codegen_rnscreens-Debug-1e76181b268fdca130f5.json",
 					"name" : "react_codegen_rnscreens",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "react_codegen_rnsvg::@4f40eb209d0c0b4a3b65",
+					"jsonFile" : "target-react_codegen_rnsvg-Debug-8f62864e25b89a753caa.json",
+					"name" : "react_codegen_rnsvg",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "react_codegen_safeareacontext::@7984cd80db47aa7b952a",
-					"jsonFile" : "target-react_codegen_safeareacontext-Debug-c89c81682a3a8540c187.json",
+					"jsonFile" : "target-react_codegen_safeareacontext-Debug-5a51d9630455a64af1de.json",
 					"name" : "react_codegen_safeareacontext",
 					"projectIndex" : 0
 				}
@@ -177,7 +202,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/x86_64",
+		"build" : "/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/armeabi-v7a",
 		"source" : "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup"
 	},
 	"version" : 

@@ -163,6 +163,42 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/arm64-v8a/CMakeFiles/cmake.verify_globs")
 endif()
 
+# rnsvg_SRCS at /home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/CMakeLists.txt:19 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/*.cpp")
+set(OLD_GLOB
+  "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/rnsvg.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# rnsvg_SRCS at /home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/CMakeLists.txt:19 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnsvg/*.cpp")
+set(OLD_GLOB
+  "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnsvg/RNSVGImageShadowNode.cpp"
+  "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnsvg/RNSVGImageState.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# rnsvg_codegen_SRCS at /home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/CMakeLists.txt:20 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/*cpp")
+set(OLD_GLOB
+  "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/ComponentDescriptors.cpp"
+  "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/EventEmitters.cpp"
+  "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/Props.cpp"
+  "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/ShadowNodes.cpp"
+  "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/States.cpp"
+  "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg/rnsvgJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/codesavvy/repos/reactnative/tick-task-app/android/app/.cxx/Debug/1q3t654s/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
 # react_codegen_SRCS at /home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/codesavvy/repos/reactnative/tick-task-app/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/*.cpp")
 set(OLD_GLOB

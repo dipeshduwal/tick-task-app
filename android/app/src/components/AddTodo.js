@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     marginBottom: 10,
   },
-  label: { fontSize: 16, color: '#333', marginRight: 10 },
+  label: { fontSize: 16, color: '#333', marginRight: 10, alignItems: 'center' },
   picker: {
     height: 45,
     width: 150,
@@ -84,10 +84,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   pickerItem: {
-    height: 45,
     fontSize: 16,
     color: '#333',
-    textAlign: 'center',
+    alignItems: 'center',
   },
   addButtonContainer: { marginTop: 10 },
 });

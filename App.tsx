@@ -14,13 +14,13 @@ function App(): React.JSX.Element {
         <StatusBar barStyle="dark-content" />
 
         <View style={styles.headerContainer}>
-          <Text style={styles.appTitle}>Tick Task App</Text>
+          <Text style={styles.appTitle}>TickTask App</Text>
           <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that.” - Kita Shinsuke</Text>
         </View>
 
         <Tab.Navigator
           screenOptions={({ route }) => ({
-            headerShown: false,
+            headerShown: () => null,
             tabBarLabelStyle: styles.tabLabel,
             tabBarActiveBackgroundColor: '#d3d3d3',
             tabBarInactiveBackgroundColor: '#ffffff',
@@ -64,8 +64,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   tabBar: {
-    height: 60,
+    display: flex,
+    height: 50,
     justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
