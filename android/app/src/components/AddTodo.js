@@ -27,8 +27,8 @@ const AddTodo = ({ addTodo }) => {
         value={text}
         onChangeText={setText}
       />
-      <Text style={styles.label}>Set Priority Level</Text>
-      <View style={styles.pickerContainer}>
+      <View style={styles.priorityContainer}>
+        <Text style={styles.label}>Set Priority Level:</Text>
         <Picker
           selectedValue={priority}
           style={styles.picker}
@@ -60,16 +60,21 @@ const AddTodo = ({ addTodo }) => {
 
 const styles = StyleSheet.create({
   container: { flexDirection: 'column', padding: 16, backgroundColor: '#fff', borderRadius: 8, marginBottom: 16 },
-  input: { marginBottom: 8, padding: 8, borderBottomWidth: 1, borderBottomColor: '#ddd', color: '#333' },
-  label: { fontSize: 16, color: '#333', marginTop: 10 },
-  pickerContainer: {
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 8,
-    marginVertical: 8,
-    overflow: 'hidden',
+  input: {
+    marginBottom: 8,
+    padding: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+    color: '#333',
+    fontSize: 18,
   },
-  picker: { height: 50, width: '100%', color: '#333' },
+  priorityContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 8
+  },
+  label: { fontSize: 16, color: '#333', marginRight: 10 },
+  picker: { height: 50, width: 150, color: '#333' },
   addButtonContainer: { marginTop: 10 },
 });
 
