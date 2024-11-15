@@ -20,7 +20,7 @@ function App(): React.JSX.Element {
 
         <Tab.Navigator
           screenOptions={({ route }) => ({
-            headerShown: () => null,
+            headerShown: false,
             tabBarLabelStyle: styles.tabLabel,
             tabBarActiveBackgroundColor: '#d3d3d3',
             tabBarInactiveBackgroundColor: '#ffffff',
@@ -62,12 +62,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#24a0ed',
     textAlign: 'center',
+    marginTop: 0,
   },
   tabBar: {
-    display: flex,
     height: 50,
+    marginTop: 0,
     justifyContent: 'center',
-    alignItems: 'center',
   },
 });
 

@@ -36,7 +36,9 @@ const HomeScreen = () => {
     );
   });
 
-  const progress = todos.length ? Number(((todos.filter(todo => todo.completed).length / todos.length) * 100).toFixed(2)) / 100 : 0;
+  const progress = todos.length
+    ? Math.round((todos.filter(todo => todo.completed).length / todos.length) * 100)
+    : 0;
 
   return (
     <View style={styles.container}>

@@ -77,11 +77,12 @@ const styles = StyleSheet.create({
   },
   label: { fontSize: 16, color: '#333', marginRight: 10, alignItems: 'center' },
   picker: {
-    height: 45,
-    width: 150,
+    height: 55,
+    width: 170,
     backgroundColor: '#D3D3D3',
     borderRadius: 8,
     justifyContent: 'center',
+    alignItems: 'center',
   },
   pickerItem: {
     fontSize: 16,
