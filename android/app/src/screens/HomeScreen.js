@@ -36,21 +36,12 @@ const HomeScreen = () => {
     );
   });
 
-  // Use `toFixed(2)` to limit precision errors and then convert to number
   const progress = todos.length ? Number(((todos.filter(todo => todo.completed).length / todos.length) * 100).toFixed(2)) / 100 : 0;
 
   return (
     <View style={styles.container}>
       <Text style={styles.header}>To-Do Lists</Text>
       <ProgressBar progress={progress} color="#3498db" style={styles.progressBar} />
-
-      <TextInput
-        style={styles.search}
-        placeholder="Search tasks..."
-        placeholderTextColor="grey"
-        onChangeText={setSearchText}
-        value={searchText}
-      />
 
       <AddTodo addTodo={addTodo} />
 
@@ -79,15 +70,23 @@ const HomeScreen = () => {
         )}
         showsVerticalScrollIndicator={false}
       />
+
+      <TextInput
+        style={styles.search}
+        placeholder="Search tasks..."
+        placeholderTextColor="grey"
+        onChangeText={setSearchText}
+        value={searchText}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: '#f5f5f5' },
-  header: { fontSize: 24, fontWeight: 'bold', color: '#333', marginBottom: 10 },
+  header: { fontSize: 20, fontWeight: 'bold', color: '#333', marginBottom: 10 },
   progressBar: { height: 10, marginBottom: 10 },
-  search: { padding: 10, backgroundColor: '#fff', borderRadius: 8, marginBottom: 10, color: 'black', placeholderTextColor: 'grey' },
+  search: { padding: 10, backgroundColor: '#fff', borderRadius: 8, marginTop: 10, color: 'black', placeholderTextColor: 'grey' },
   filterContainer: { flexDirection: 'row', justifyContent: 'space-around', marginBottom: 10 },
   filterText: { fontSize: 16, color: '#3498db' },
   activeFilter: { fontWeight: 'bold', color: '#1abc9c' }

@@ -15,7 +15,7 @@ function App(): React.JSX.Element {
 
         <View style={styles.headerContainer}>
           <Text style={styles.appTitle}>Tick Task App</Text>
-          <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that.   - Kita Shinsuke”</Text>
+          <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that.”   - Kita Shinsuke</Text>
         </View>
 
         <Tab.Navigator
@@ -37,18 +37,18 @@ const styles = StyleSheet.create({
   appTitle: {
     fontSize: 30,
     fontWeight: 'bold',
-    color: '#d1c2b8',
+    color: '#0a2472',
     fontFamily: 'Cochin',
     textAlign: 'center',
     marginBottom: 10,
-    marginTop: 20,
+    marginTop: 10,
   },
   quote: {
     fontSize: 15,
     color: 'grey',
     fontStyle: 'italic',
     textAlign: 'center',
-    marginBottom: 10,
+    marginBottom: 5,
   },
 });
 
