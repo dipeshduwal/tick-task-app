@@ -79,14 +79,14 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     backgroundColor: '#f9f9f9',
     fontSize: 16,
-    marginBottom: 12,
+    marginBottom: 8,
     color: '#333',
   },
   priorityContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 8,
-    marginBottom: 10,
+    marginBottom: 8,
   },
   label: {
     fontSize: 16,
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   picker: {
-    height: 50,
+    height: 55,
     width: 160,
     backgroundColor: '#eaeaea',
     borderRadius: 8,
