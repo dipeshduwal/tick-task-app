@@ -120,7 +120,12 @@ const TimerScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#f5f5f5' },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f5f5f5',
+  },
   taskInput: {
     width: '80%',
     padding: 10,
@@ -132,9 +137,22 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
-  timeButton: { backgroundColor: '#3498db', padding: 10, borderRadius: 8, marginBottom: 20 },
-  timeButtonText: { color: '#fff', fontSize: 16, textAlign: 'center' },
-  progressCircle: { height: 200, width: 200, marginBottom: 20 },
+  timeButton: {
+    backgroundColor: '#3498db',
+    padding: 10,
+    borderRadius: 8,
+    marginBottom: 20,
+  },
+  timeButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  progressCircle: {
+    height: 200,
+    width: 200,
+    marginBottom: 20,
+  },
   timerText: {
     position: 'absolute',
     fontSize: 30,
@@ -142,8 +160,23 @@ const styles = StyleSheet.create({
     color: '#333',
     textAlign: 'center',
   },
-  buttonContainer: { flexDirection: 'row', justifyContent: 'space-around', width: '80%', marginBottom: 20 },
-  taskDisplay: { fontSize: 16, color: '#333', marginTop: 10 },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '80%',
+    marginBottom: 20,
+  },
+  taskDisplay: {
+    fontSize: 18,
+    color: '#fff',
+    backgroundColor: '#3498db',
+    padding: 10,
+    borderRadius: 8,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginTop: 10,
+    elevation: 2, // For a slight shadow effect
+  },
   modalContainer: {
     flex: 1,
     justifyContent: 'center',
@@ -155,12 +188,32 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 20,
     alignItems: 'center',
-    width: '80%',
+    width: '90%', // Increased width for better visibility
   },
-  modalTitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 10 },
-  pickerContainer: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 10 },
-  picker: { height: 100, width: 100, color: '#383838' },
-  modalButtonContainer: { flexDirection: 'row', justifyContent: 'space-between', width: '80%', marginTop: 10 },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  pickerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    width: '100%', // Ensure the pickers fit within the modal
+    marginBottom: 10,
+  },
+  picker: {
+    height: 100,
+    width: 120, // Increased width for better display
+    color: '#383838',
+  },
+  modalButtonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '80%',
+    marginTop: 10,
+  },
 });
+
 
 export default TimerScreen;
