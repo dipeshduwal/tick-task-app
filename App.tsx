@@ -58,16 +58,15 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   tabLabel: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
     color: '#24a0ed',
     textAlign: 'center',
-    marginTop: 0,
   },
   tabBar: {
-    height: 50,
-    marginTop: 0,
+    height: 60,
     justifyContent: 'center',
+    padding-bottom: 10,
   },
 });
 
