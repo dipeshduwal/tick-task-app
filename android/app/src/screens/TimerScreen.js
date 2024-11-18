@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   },
   modalTitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 10 },
   pickerContainer: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 10 },
-  picker: { height: 100, width: 100, color: '#a9a9a9' },
+  picker: { height: 100, width: 100, color: '#383838' },
   modalButtonContainer: { flexDirection: 'row', justifyContent: 'space-between', width: '80%', marginTop: 10 },
 });
 
