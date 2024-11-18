@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
   },
   picker: {
     height: 100,
-    width: 150, // Increased width for better display
+    width: 170, // Increased width for better display
     color: '#383838',
   },
   modalButtonContainer: {

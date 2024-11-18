@@ -22,8 +22,8 @@ const AddTodo = ({ addTodo }) => {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder="Add new task..."
-        placeholderTextColor="#888"
+        placeholder="Add a new task..."
+        placeholderTextColor="#aaa"
         value={text}
         onChangeText={setText}
       />
@@ -60,14 +60,27 @@ const AddTodo = ({ addTodo }) => {
 };
 
 const styles = StyleSheet.create({
-  container: { flexDirection: 'column', padding: 16, backgroundColor: '#fff', borderRadius: 8, marginBottom: 16 },
+  container: {
+    flexDirection: 'column',
+    padding: 16,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    marginBottom: 16,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 4, // For Android shadow
+  },
   input: {
-    marginBottom: 8,
-    padding: 8,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    padding: 12,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 8,
+    backgroundColor: '#f9f9f9',
+    fontSize: 16,
+    marginBottom: 12,
     color: '#333',
-    fontSize: 18,
   },
   priorityContainer: {
     flexDirection: 'row',
@@ -75,11 +88,16 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     marginBottom: 10,
   },
-  label: { fontSize: 16, color: '#333', marginRight: 10, alignItems: 'center' },
+  label: {
+    fontSize: 16,
+    color: '#333',
+    marginRight: 10,
+    alignItems: 'center',
+  },
   picker: {
-    height: 55,
-    width: 170,
-    backgroundColor: '#D3D3D3',
+    height: 50,
+    width: 160,
+    backgroundColor: '#eaeaea',
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
@@ -89,7 +107,9 @@ const styles = StyleSheet.create({
     color: '#333',
     alignItems: 'center',
   },
-  addButtonContainer: { marginTop: 10 },
+  addButtonContainer: {
+    marginTop: 10,
+  },
 });
 
 export default AddTodo;
