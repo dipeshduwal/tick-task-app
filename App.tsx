@@ -15,7 +15,10 @@ function App(): React.JSX.Element {
 
         <View style={styles.headerContainer}>
           <Text style={styles.appTitle}>TickTask App</Text>
-          <Text style={styles.quote}>“I am built upon the small things I do every day, the end results are not more than a byproduct of that.”   - Kita Shinsuke</Text>
+          <Text style={styles.quote}>
+            “I am built upon the small things I do every day, the end results are not more than a byproduct of that.”
+            - Kita Shinsuke
+          </Text>
         </View>
 
         <Tab.Navigator
@@ -59,15 +62,15 @@ const styles = StyleSheet.create({
   },
   tabLabel: {
     fontSize: 16,
-    height: 60,
     fontWeight: 'bold',
     color: '#24a0ed',
     textAlign: 'center',
+    paddingVertical: 10, // Adds equal padding above and below the text
   },
   tabBar: {
-    height: 60,
-    justifyContent: 'center',
-    paddingBottom: 10,
+    height: 60, // Adjusts the total height of the tab bar
+    paddingVertical: 0, // Removes any extra padding in the vertical direction
+    justifyContent: 'center', // Centers content vertically
   },
 });
 
