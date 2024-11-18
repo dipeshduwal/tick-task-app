@@ -52,6 +52,13 @@ const TimerScreen = () => {
     setIsPickerVisible(false);
   };
 
+  const setPomodoro = (durationInMinutes) => {
+    const totalSeconds = durationInMinutes * 60;
+    setCountdownTime(totalSeconds);
+    setTimeLeft(totalSeconds);
+    setIsRunning(false);
+  };
+
   const formattedTime = `${Math.floor(timeLeft / 60)
     .toString()
     .padStart(2, '0')}:${(timeLeft % 60).toString().padStart(2, '0')}`;
@@ -61,6 +68,7 @@ const TimerScreen = () => {
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
+      <Text style={styles.heading}>Timer</Text>
       <TextInput
         style={styles.taskInput}
         placeholder="Enter task name"
@@ -68,8 +76,14 @@ const TimerScreen = () => {
         value={taskName}
         onChangeText={setTaskName}
       />
+      <View style={styles.pomodoroContainer}>
+        <Text style={styles.pomodoroText}>Preset Pomodoro:</Text>
+        <Button title="25 mins" onPress={() => setPomodoro(25)} color="#fa8072" />
+        <Button title="15 mins" onPress={() => setPomodoro(15)} color="#1abc9c" />
+        <Button title="5 mins" onPress={() => setPomodoro(5)} color="#3498db" />
+      </View>
       <TouchableOpacity onPress={() => setIsPickerVisible(true)} style={styles.timeButton}>
-        <Text style={styles.timeButtonText}>Set Timer</Text>
+        <Text style={styles.timeButtonText}>Set Custom Timer</Text>
       </TouchableOpacity>
       <ProgressCircle
         style={styles.progressCircle}
@@ -88,7 +102,6 @@ const TimerScreen = () => {
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>Select Minutes and Seconds</Text>
-            <Text style={styles.modalSubtitle}>** Click on time below to pick your desired time-duration **</Text>
             <View style={styles.pickerContainer}>
               <Picker
                 selectedValue={selectedMinutes}
@@ -127,6 +140,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#f5f5f5',
   },
+  heading: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 10,
+  },
   taskInput: {
     width: '80%',
     padding: 10,
@@ -137,6 +156,17 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     fontSize: 16,
     textAlign: 'center',
+  },
+  pomodoroContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '80%',
+    marginBottom: 10,
+  },
+  pomodoroText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#333',
   },
   timeButton: {
     backgroundColor: '#3498db',
@@ -155,7 +185,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   timerText: {
-    position: 'absolute',
     fontSize: 30,
     fontWeight: 'bold',
     color: '#333',
@@ -176,7 +205,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
     marginTop: 10,
-    elevation: 2, // For a slight shadow effect
   },
   modalContainer: {
     flex: 1,
@@ -189,29 +217,22 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 20,
     alignItems: 'center',
-    width: '90%', // Increased width for better visibility
+    width: '90%',
   },
   modalTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
-    textAlign: 'center',
-  },
-  modalSubtitle: {
-      fontSize: 14,
-      color: '#eaeaea',
-      textAlign: 'center',
   },
   pickerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '100%', // Ensure the pickers fit within the modal
+    width: '100%',
     marginBottom: 10,
   },
   picker: {
     height: 100,
-    width: 170, // Increased width for better display
-    color: '#383838',
+    width: 170,
   },
   modalButtonContainer: {
     flexDirection: 'row',
@@ -220,6 +241,5 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 });
-
 
 export default TimerScreen;

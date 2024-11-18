@@ -65,12 +65,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#24a0ed',
     textAlign: 'center',
-    paddingVertical: 10, // Adds equal padding above and below the text
+    marginBottom: 15,
   },
   tabBar: {
-    height: 60, // Adjusts the total height of the tab bar
-    paddingVertical: 0, // Removes any extra padding in the vertical direction
-    justifyContent: 'center', // Centers content vertically
+    height: 50,
+    paddingVertical: 0,
+    justifyContent: 'center',
   },
 });
 
