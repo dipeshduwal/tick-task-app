@@ -18,6 +18,19 @@ const AddTodo = ({ addTodo }) => {
     }
   };
 
+  const getPickerStyle = () => {
+    switch (priority) {
+      case 'Low':
+        return styles.pickerLow;
+      case 'Medium':
+        return styles.pickerMedium;
+      case 'High':
+        return styles.pickerHigh;
+      default:
+        return styles.pickerLow;
+    }
+  };
+
   return (
     <View style={styles.container}>
       <TextInput
@@ -31,7 +44,7 @@ const AddTodo = ({ addTodo }) => {
         <Text style={styles.label}>Set Priority Level:</Text>
         <Picker
           selectedValue={priority}
-          style={styles.picker}
+          style={[styles.picker, getPickerStyle()]}
           itemStyle={styles.pickerItem}
           onValueChange={(itemValue) => setPriority(itemValue)}
         >
@@ -97,15 +110,19 @@ const styles = StyleSheet.create({
   picker: {
     height: 55,
     width: 160,
-    backgroundColor: '#eaeaea',
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#eaeaea',
   },
-  pickerItem: {
-    fontSize: 16,
-    color: '#333',
-    alignItems: 'center',
+  pickerLow: {
+    color: 'green',
+  },
+  pickerMedium: {
+    color: 'orange',
+  },
+  pickerHigh: {
+    color: 'red',
   },
   addButtonContainer: {
     marginTop: 10,
