@@ -51,6 +51,7 @@ const TimerScreen = () => {
       <TextInput
         style={styles.taskInput}
         placeholder="Enter task name"
+        placeholderTextColor="#a9a9a9"
         value={taskName}
         onChangeText={setTaskName}
       />
@@ -94,8 +95,10 @@ const TimerScreen = () => {
                 ))}
               </Picker>
             </View>
-            <Button title="Set Time" onPress={handleTimePick} color="#3498db" />
-            <Button title="Cancel" onPress={() => setIsPickerVisible(false)} color="#a9a9a9" />
+            <View style={styles.modalButtonContainer}>
+              <Button title="Set Time" onPress={handleTimePick} color="#3498db" />
+              <Button title="Cancel" onPress={() => setIsPickerVisible(false)} color="#a9a9a9" />
+            </View>
           </View>
         </View>
       </Modal>
@@ -143,7 +146,8 @@ const styles = StyleSheet.create({
   },
   modalTitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 10 },
   pickerContainer: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 10 },
-  picker: { height: 100, width: 100 },
+  picker: { height: 100, width: 100, color: '#a9a9a9' },
+  modalButtonContainer: { flexDirection: 'row', justifyContent: 'space-between', width: '80%', marginTop: 10 },
 });
 
 export default TimerScreen;
