@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, StyleSheet, TextInput, Modal, TouchableOpacity } from 'react-native';
+import {
+  View,
+  Text,
+  Button,
+  StyleSheet,
+  TextInput,
+  Modal,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  Platform,
+} from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { ProgressCircle } from 'react-native-svg-charts';
 
@@ -47,7 +57,10 @@ const TimerScreen = () => {
     .padStart(2, '0')}:${(timeLeft % 60).toString().padStart(2, '0')}`;
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    >
       <TextInput
         style={styles.taskInput}
         placeholder="Enter task name"
@@ -82,7 +95,7 @@ const TimerScreen = () => {
                 onValueChange={(itemValue) => setSelectedMinutes(itemValue)}
               >
                 {Array.from({ length: 61 }, (_, i) => (
-                  <Picker.Item key={i} label={`${i} min`} value={i} />
+                  <Picker.Item key={i} label={`${i} mins`} value={i} />
                 ))}
               </Picker>
               <Picker
@@ -91,7 +104,7 @@ const TimerScreen = () => {
                 onValueChange={(itemValue) => setSelectedSeconds(itemValue)}
               >
                 {Array.from({ length: 60 }, (_, i) => (
-                  <Picker.Item key={i} label={`${i} sec`} value={i} />
+                  <Picker.Item key={i} label={`${i} secs`} value={i} />
                 ))}
               </Picker>
             </View>
@@ -102,7 +115,7 @@ const TimerScreen = () => {
           </View>
         </View>
       </Modal>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
