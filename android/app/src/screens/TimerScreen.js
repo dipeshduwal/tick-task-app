@@ -79,7 +79,7 @@ const TimerScreen = () => {
       />
       <Text style={styles.timerText}>{formattedTime}</Text>
       <View style={styles.buttonContainer}>
-        <Button title={isRunning ? 'Pause' : 'Start'} onPress={handleStartPause} color="#24a0ed" />
+        <Button title={isRunning ? 'Pause' : 'Start'} onPress={handleStartPause} color="#fa8072" />
         <Button title="Reset" onPress={handleReset} color="#1abc9c" />
       </View>
       <Text style={styles.taskDisplay}>Task: {taskName || 'No task entered'}</Text>
@@ -88,6 +88,7 @@ const TimerScreen = () => {
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>Select Minutes and Seconds</Text>
+            <Text style={styles.modalSubtitle}>** Click on time below to pick your desired time-duration **</Text>
             <View style={styles.pickerContainer}>
               <Picker
                 selectedValue={selectedMinutes}
@@ -196,15 +197,21 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     textAlign: 'center',
   },
+  modalSubtitle: {
+      fontSize: 14,
+      color: #333,
+      marginBottom: 10,
+      textAlign: 'center',
+  },
   pickerContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     width: '100%', // Ensure the pickers fit within the modal
     marginBottom: 10,
   },
   picker: {
     height: 100,
-    width: 120, // Increased width for better display
+    width: 150, // Increased width for better display
     color: '#383838',
   },
   modalButtonContainer: {
