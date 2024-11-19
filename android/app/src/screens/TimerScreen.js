@@ -183,6 +183,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '80%',
+    marginBottom: 10,
   },
   timeButton: {
     backgroundColor: '#3498db',
@@ -201,7 +202,6 @@ const styles = StyleSheet.create({
     position: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 10,
   },
   progressCircle: {
     height: 170,

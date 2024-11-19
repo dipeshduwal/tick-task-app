@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './android/app/src/screens/HomeScreen';
 import TimerScreen from './android/app/src/screens/TimerScreen';
+import Icon from 'react-native-vector-icons/FontAwesome'; // Import the icon library
 
 const Tab = createBottomTabNavigator();
 
@@ -17,18 +18,31 @@ function App(): React.JSX.Element {
           <Text style={styles.appTitle}>TickTask App</Text>
           <Text style={styles.quote}>
             “I am built upon the small things I do every day, the end results are not more than a byproduct of that.”
-            - Kita Shinsuke
+               - Kita Shinsuke
           </Text>
         </View>
 
         <Tab.Navigator
           screenOptions={({ route }) => ({
             headerShown: false,
-            tabBarLabelStyle: styles.tabLabel,
+            tabBarLabelStyle: ({ focused }) => ({
+              ...styles.tabLabel,
+              color: focused ? '#007ACC' : '#4B4B4B',
+            }),
             tabBarActiveBackgroundColor: '#e6f7ff',
             tabBarInactiveBackgroundColor: '#ffffff',
             tabBarStyle: styles.tabBar,
-            tabBarIcon: () => null, // Explicitly remove the icon
+            tabBarIcon: ({ focused }) => {
+              let iconName;
+
+              if (route.name === 'To-Do Lists') {
+                iconName = 'sticky-note';
+              } else if (route.name === 'Timer') {
+                iconName = 'hourglass';
+              }
+
+              return <Icon name={iconName} size={25} color={focused ? '#007ACC' : '#4B4B4B'} />;
+            },
           })}
         >
           <Tab.Screen name="To-Do Lists" component={HomeScreen} />
@@ -63,7 +77,6 @@ const styles = StyleSheet.create({
   tabLabel: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#007ACC',
     textAlign: 'center',
     marginBottom: 5,
   },
