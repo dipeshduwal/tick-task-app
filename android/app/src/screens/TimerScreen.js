@@ -77,6 +77,7 @@ const TimerScreen = () => {
         value={taskName}
         onChangeText={setTaskName}
       />
+      <Text style={styles.pomodoroHeading}>Choose your pomodoro preset</Text>
       <View style={styles.pomodoroContainer}>
         <Button title="25 mins" onPress={() => setPomodoro(25)} color="#fa8072" />
         <Button title="15 mins" onPress={() => setPomodoro(15)} color="#1abc9c" />
@@ -169,6 +170,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
+  pomodoroHeading: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 10,
+    marginTop: 5,
+    textAlign: 'center',
+  },
   pomodoroContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -179,6 +188,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#3498db',
     padding: 10,
     borderRadius: 8,
+    marginTop: 10;
     marginBottom: 20,
   },
   timeButtonText: {
@@ -238,7 +248,7 @@ const styles = StyleSheet.create({
   },
   modalSubtitle: {
     fontSize: 14,
-    color: '#eaeaea',
+    color: '#383838',
     textAlign: 'center',
   },
   pickerContainer: {
