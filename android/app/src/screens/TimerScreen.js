@@ -73,7 +73,7 @@ const TimerScreen = () => {
       <TextInput
         style={styles.taskInput}
         placeholder="Enter task name"
-        placeholderTextColor="#a9a9a9"
+        placeholderTextColor="#8f8f8f"
         value={taskName}
         onChangeText={setTaskName}
       />
@@ -158,13 +158,13 @@ const styles = StyleSheet.create({
     width: '70%',
     backgroundColor: '#3498db',
     borderRadius: 2.5,
-    marginBottom: 10,
+    marginBottom: 15,
   },
   taskInput: {
     width: '80%',
     padding: 8,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: '#8f8f8f',
     borderRadius: 8,
     color: '#333',
     marginBottom: 10,
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
   timeButtonText: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 15,
     textAlign: 'center',
   },
   progressCircleContainer: {
@@ -222,11 +222,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   taskDisplay: {
-    fontSize: 18,
-    color: '#fff',
-    backgroundColor: '#808080',
-    padding: 8,
-    borderRadius: 8,
+    fontSize: 20,
+    color: '#4B4B4B',
     textAlign: 'center',
     fontWeight: 'bold',
     marginTop: 10,
