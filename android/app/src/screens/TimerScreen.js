@@ -68,7 +68,7 @@ const TimerScreen = () => {
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <Text style={styles.heading}>Timer</Text>
+      <Text style={styles.heading}>Pomodoro Timer</Text>
       <View style={styles.headingUnderline} />
       <TextInput
         style={styles.taskInput}
@@ -81,7 +81,7 @@ const TimerScreen = () => {
       <View style={styles.pomodoroContainer}>
         <Button title="25 mins" onPress={() => setPomodoro(25)} color="#fa8072" />
         <Button title="15 mins" onPress={() => setPomodoro(15)} color="#1abc9c" />
-        <Button title="5 mins" onPress={() => setPomodoro(5)} color="#fdb58" />
+        <Button title="5 mins" onPress={() => setPomodoro(5)} color="#daa520" />
       </View>
       <TouchableOpacity onPress={() => setIsPickerVisible(true)} style={styles.timeButton}>
         <Text style={styles.timeButtonText}>Set Custom Timer</Text>
@@ -147,21 +147,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   heading: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: 5,
+    marginTop: 3,
+    marginBottom: 2,
   },
   headingUnderline: {
-    height: 5,
-    width: '50%',
+    height: 4,
+    width: '70%',
     backgroundColor: '#3498db',
     borderRadius: 2.5,
     marginBottom: 10,
   },
   taskInput: {
     width: '80%',
-    padding: 10,
+    padding: 8,
     borderWidth: 1,
     borderColor: '#ddd',
     borderRadius: 8,
@@ -182,28 +183,29 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '80%',
-    marginBottom: 10,
   },
   timeButton: {
     backgroundColor: '#3498db',
     padding: 10,
     borderRadius: 8,
-    marginTop: 10;
-    marginBottom: 20,
+    marginTop: 10,
+    marginBottom: 10,
   },
   timeButtonText: {
     color: '#fff',
-    fontSize: 16,
+    fontWeight: 'bold',
+    fontSize: 14,
     textAlign: 'center',
   },
   progressCircleContainer: {
     position: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: 10,
   },
   progressCircle: {
-    height: 200,
-    width: 200,
+    height: 170,
+    width: 170,
   },
   timerText: {
     position: 'absolute',
@@ -216,13 +218,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '80%',
+    marginTop: 5,
     marginBottom: 10,
   },
   taskDisplay: {
     fontSize: 18,
     color: '#fff',
-    backgroundColor: '#3498db',
-    padding: 10,
+    backgroundColor: '#808080',
+    padding: 8,
     borderRadius: 8,
     textAlign: 'center',
     fontWeight: 'bold',

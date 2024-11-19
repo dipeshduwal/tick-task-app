@@ -41,15 +41,10 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    backgroundColor: '#ffffff',
-    padding: 15,
+    backgroundColor: '#e6f7ff',
+    padding: 10,
     borderRadius: 10,
-    margin: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 5,
+    margin: 8,
   },
   appTitle: {
     fontSize: 26,
@@ -67,10 +62,10 @@ const styles = StyleSheet.create({
   },
   tabLabel: {
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: '#007ACC',
     textAlign: 'center',
-    marginBottom: 5, // Reduce the margin to fix alignment
+    marginBottom: 5,
   },
   tabBar: {
     height: 60,

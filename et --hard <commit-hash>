@@ -1,0 +1,67 @@
+[33m0177f76[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Addvector icons for tab bar
+[33m4dbed33[m Fix bottom tab bar navigation
+[33m3921232[m Add pomodoro preset heading
+[33m7fe1d07[m[33m ([m[1;31morigin/main[m[33m)[m Fix timer screen css
+[33mb1c2688[m Add timer at the center of progress circle
+[33mf5ad105[m Add preset pomodoro feature
+[33m07b7bcc[m Set conditional picker color
+[33mb792d73[m Change flatlist and heading css
+[33m9ee582f[m Change tabbar navigation
+[33mdd750a8[m Change add task text input
+[33m05f74df[m Add modal subtitle in grey color
+[33m115bb9e[m Ensure the pickers fit correctly within the container
+[33mc32181c[m Change tab bar style for navigation
+[33mf272753[m Show full formatted mins and secs in time
+[33me2e7005[m Use keyboard avoiding view for text input
+[33m98a55e9[m Change timer modal to pick time
+[33m787a2e1[m Change progess bar function
+[33m1a4145a[m Fix precision error and change timer screen
+[33m1b58315[m Add scrollable time picker instead of textinput for time
+[33m97a3053[m Add timer screen and functionality
+[33m87148b7[m Make css changes
+[33m9476ef7[m Place searchbar next to heading
+[33mb90dfc4[m Fix picker text color and height
+[33mabf31d9[m Change icon in tab bar to null
+[33m9c47699[m Add background color for tabscreens and remove icon for tab
+[33m0e4fb57[m Change priority picker to be on same line
+[33m2b786a7[m Addsearchbar at the bottom of todo home screen
+[33md65a016[m Update Navigation bar for the main screen app
+[33mbdd2770[m Remove node_modules from tracking and update .gitignore
+[33mcdfbf54[m Add timer screen and separate todo screen
+[33m8375da7[m Modify homescreen todo app
+[33mc6a7f0e[m Add Timer Screen
+[33m0fbe903[m Add navigation screens to main app
+[33m7c816ef[m Install react screens
+[33md3de3f6[m Fix precision error for progress bar
+[33md7e469c[m Add scorllable task list and quote section
+[33m8d30a68[m Add complete and incomplete sections
+[33m8bc0a63[m Change css todo item style
+[33m13bff39[m Change Add todo style
+[33m6045eb8[m Change Homescreen style
+[33mce6c89f[m Add days left indicator to tasks list
+[33mf633db0[m Add toggle to set reminder and reminder options
+[33m1ba445b[m Add sorting option to tasks
+[33m0a3ee8e[m Addicon updates and modal spacing
+[33mc81de75[m Add label and picker styling
+[33m4dcbefe[m Add placeholder text style and update progress calculation
+[33m9014480[m Change import properties and path
+[33m9533c29[m Change gradle properties
+[33ma50edcc[m Add due dates and priority assignment
+[33ma09e0e1[m Add edit and toggle function
+[33m8033264[m Add due date picker
+[33m92dd343[m Add search bar and filter control
+[33mbaface2[m Add progress bar
+[33me6bc07c[m Add color grading for priority level
+[33m97d804b[m Add dropdown for priority level
+[33m6c75cc5[m Improve appearance of input area
+[33m38ac45b[m Add card like design for item list
+[33m88965b1[m Change layout
+[33m995e664[m Add checkbox and delete icon
+[33m2a466a4[m Add incomplete and complete lists section
+[33mc51cad4[m Source Homescreen file to main entry point
+[33m93fa3d4[m Add ToDo Item File
+[33mdad89ea[m Add todo file
+[33mae4afc0[m Add homescreen
+[33mc4e61be[m Configure Git LFS to track large files
+[33m6f7f213[m Add android, ios, and other missing files
+[33m9ace383[m Initial commit
