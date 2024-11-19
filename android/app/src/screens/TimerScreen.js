@@ -81,7 +81,7 @@ const TimerScreen = () => {
       <View style={styles.pomodoroContainer}>
         <Button title="25 mins" onPress={() => setPomodoro(25)} color="#fa8072" />
         <Button title="15 mins" onPress={() => setPomodoro(15)} color="#1abc9c" />
-        <Button title="5 mins" onPress={() => setPomodoro(5)} color="#3498db" />
+        <Button title="5 mins" onPress={() => setPomodoro(5)} color="#fdb58" />
       </View>
       <TouchableOpacity onPress={() => setIsPickerVisible(true)} style={styles.timeButton}>
         <Text style={styles.timeButtonText}>Set Custom Timer</Text>

@@ -25,7 +25,7 @@ function App(): React.JSX.Element {
           screenOptions={({ route }) => ({
             headerShown: false,
             tabBarLabelStyle: styles.tabLabel,
-            tabBarActiveBackgroundColor: '#d3d3d3',
+            tabBarActiveBackgroundColor: '#e6f7ff',
             tabBarInactiveBackgroundColor: '#ffffff',
             tabBarStyle: styles.tabBar,
             tabBarIcon: () => null, // Explicitly remove the icon
@@ -41,36 +41,42 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    backgroundColor: '#f7f1e1',
-    padding: 10,
+    backgroundColor: '#ffffff',
+    padding: 15,
+    borderRadius: 10,
+    margin: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 5,
   },
   appTitle: {
-    fontSize: 28,
+    fontSize: 26,
     fontWeight: 'bold',
-    color: '#24a0ed',
+    color: '#007ACC',
     fontFamily: 'Cochin',
     textAlign: 'center',
-    marginBottom: 10,
-    marginTop: 5,
+    marginBottom: 8,
   },
   quote: {
-    fontSize: 15,
-    color: 'grey',
+    fontSize: 14,
+    color: '#4B4B4B',
     fontStyle: 'italic',
     textAlign: 'center',
-    marginBottom: 5,
   },
   tabLabel: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#24a0ed',
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#007ACC',
     textAlign: 'center',
-    marginBottom: 15,
+    marginBottom: 5, // Reduce the margin to fix alignment
   },
   tabBar: {
-    height: 50,
-    paddingVertical: 0,
-    justifyContent: 'center',
+    height: 60,
+    paddingVertical: 5,
+    borderTopWidth: 1,
+    borderTopColor: '#ddd',
   },
 });
 
