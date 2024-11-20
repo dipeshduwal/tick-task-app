@@ -8,7 +8,7 @@ TickTask is an easy-to-use React Native app that helps you manage tasks and time
 
 <div align="center">
   <img src="android/app/assets/todolist.jpg" alt="To-Do List Screen" width="35%">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="android/app/assets/timer.jpg" alt="Timer Screen" width="35%">
 </div>
 
@@ -18,15 +18,15 @@ TickTask is an easy-to-use React Native app that helps you manage tasks and time
 ### 📝 To-Do List Features   
 - **Add Tasks**: Effortlessly create tasks with a few taps.  
 - **Edit and Delete Tasks**: Modify or remove tasks as needed.  
-- **Search Tasks**: Quickly locate tasks using the search functionality.  
+- **Search Tasks**: Quickly find tasks using the search functionality.  
 - **Priority Levels**: Organize tasks by setting high, medium, or low priorities.  
 - **Due Dates**: Stay on track with tasks by setting due dates.  
 - **Complete/Incomplete Sections**: Mark tasks as complete or incomplete and view them based on their completion status.
 
 ### ⏱️ Timer Features  
+- **Start, Pause, Reset**: Seamlessly control the timer for flexible time management.  
 - **Progress Circle**: Visualize elapsed and remaining time with an interactive progress circle.  
 - **Pomodoro Presets**: Focus and increase productivity with Pomodoro-based timer presets.  
-- **Start, Pause, Reset**: Seamlessly control the timer for flexible time management.  
 - **Tab Bar Navigation**: Jump from To-do-list tab to Timer tab effortlessly. 
 
 ---
@@ -52,7 +52,7 @@ TickTask is built using modern tools and technologies to ensure a seamless user 
 - **Visual Studio Code**: As code editor.
 
 ### **Version Control**  
-- **Git & GitHub**: For version control and collaboration.
+- **Git & GitHub**: For version control and repository management.
 
 ---
 
@@ -62,8 +62,11 @@ Get started with TickTask by following these simple steps:
 
 ### Prerequisites  
 - **Node.js**: Version 14+ recommended.  
+- **React**: A JavaScript library for building user interfaces. 
+- **React Native**: Framework for building mobile apps using React. 
 - **npm** or **Yarn**: Dependency manager.  
 - **Android Studio**: For running on Android devices.  
+- **react-native-cli**: To initialize and manage React Native projects.  
 - **JDK**: Required for Android development.  
 
 ### Steps  
