@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 import { ProgressCircle } from 'react-native-svg-charts';
+import styles from '../styles/ProgressCircleStyles';
 
 const ProgressCircleComponent = ({ timeLeft, countdownTime, formattedTime }) => {
   return (
@@ -15,25 +16,5 @@ const ProgressCircleComponent = ({ timeLeft, countdownTime, formattedTime }) => 
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  progressCircleContainer: {
-    position: 'relative',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 20,
-  },
-  progressCircle: {
-    height: 170,
-    width: 170,
-  },
-  timerText: {
-    position: 'absolute',
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: '#333',
-    textAlign: 'center',
-  },
-});
 
 export default ProgressCircleComponent;
