@@ -7,9 +7,10 @@ TickTask is an easy-to-use React Native app that helps you manage tasks and time
 ## 🖌️ App Preview  
 
 <div align="center">
-  <img src="android/app/assets/todolist.jpg" alt="To-Do List Screen" width="45%" style="margin-right: 10px;" />
-  <img src="android/app/assets/timer.jpg" alt="Timer Screen" width="45%" />
+  <img src="android/app/assets/todolist.jpg" alt="To-Do List Screen" width="38%" style="margin-right: 20px;" />
+  <img src="android/app/assets/timer.jpg" alt="Timer Screen" width="38%" />
 </div>
+
 
 ---
 
