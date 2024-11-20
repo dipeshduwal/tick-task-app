@@ -4,18 +4,18 @@ import {
   Text,
   Button,
   StyleSheet,
-  TextInput,
-  Modal,
   TouchableOpacity,
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-import { ProgressCircle } from 'react-native-svg-charts';
+import TaskInput from '../components/TaskInput';
+import PomodoroPresets from '../components/PomodoroPresets';
+import ProgressCircleComponent from '../components/ProgressCircle';
+import CustomTimerModal from '../components/CustomTimerModal';
 
 const TimerScreen = () => {
   const [taskName, setTaskName] = useState('');
-  const [countdownTime, setCountdownTime] = useState(60); // default 60 seconds
+  const [countdownTime, setCountdownTime] = useState(60);
   const [timeLeft, setTimeLeft] = useState(countdownTime);
   const [isRunning, setIsRunning] = useState(false);
   const [isPickerVisible, setIsPickerVisible] = useState(false);
@@ -25,9 +25,7 @@ const TimerScreen = () => {
   useEffect(() => {
     let interval = null;
     if (isRunning && timeLeft > 0) {
-      interval = setInterval(() => {
-        setTimeLeft((prev) => prev - 1);
-      }, 1000);
+      interval = setInterval(() => setTimeLeft((prev) => prev - 1), 1000);
     } else if (timeLeft === 0) {
       setIsRunning(false);
     }
@@ -35,9 +33,7 @@ const TimerScreen = () => {
   }, [isRunning, timeLeft]);
 
   const handleStartPause = () => {
-    if (timeLeft > 0) {
-      setIsRunning(!isRunning);
-    }
+    if (timeLeft > 0) setIsRunning(!isRunning);
   };
 
   const handleReset = () => {
@@ -70,71 +66,37 @@ const TimerScreen = () => {
     >
       <Text style={styles.heading}>Pomodoro Timer</Text>
       <View style={styles.headingUnderline} />
-      <TextInput
-        style={styles.taskInput}
-        placeholder="Enter task name"
-        placeholderTextColor="#8f8f8f"
-        value={taskName}
-        onChangeText={setTaskName}
-      />
-      <Text style={styles.pomodoroHeading}>Choose your pomodoro preset</Text>
-      <View style={styles.pomodoroContainer}>
-        <Button title="25 mins" onPress={() => setPomodoro(25)} color="#fa8072" />
-        <Button title="15 mins" onPress={() => setPomodoro(15)} color="#1abc9c" />
-        <Button title="5 mins" onPress={() => setPomodoro(5)} color="#daa520" />
-      </View>
+
+      <TaskInput taskName={taskName} setTaskName={setTaskName} />
+
+      <PomodoroPresets setPomodoro={setPomodoro} />
+
       <TouchableOpacity onPress={() => setIsPickerVisible(true)} style={styles.timeButton}>
         <Text style={styles.timeButtonText}>Set Custom Timer</Text>
       </TouchableOpacity>
-      <View style={styles.progressCircleContainer}>
-        <ProgressCircle
-          style={styles.progressCircle}
-          progress={timeLeft / countdownTime}
-          progressColor="#3498db"
-          backgroundColor="#d3d3d3"
-        />
-        <Text style={styles.timerText}>{formattedTime}</Text>
-      </View>
+
+      <ProgressCircleComponent 
+        timeLeft={timeLeft} 
+        countdownTime={countdownTime} 
+        formattedTime={formattedTime} 
+      />
+
       <View style={styles.buttonContainer}>
         <Button title={isRunning ? 'Pause' : 'Start'} onPress={handleStartPause} color="#fa8072" />
         <Button title="Reset" onPress={handleReset} color="#1abc9c" />
       </View>
+
       <Text style={styles.taskDisplay}>Task: {taskName || 'No task entered'}</Text>
 
-      <Modal visible={isPickerVisible} transparent animationType="slide">
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <Text style={styles.modalTitle}>Select Minutes and Seconds</Text>
-            <Text style={styles.modalSubtitle}>
-              ** Click on time below to pick your desired time-duration **
-            </Text>
-            <View style={styles.pickerContainer}>
-              <Picker
-                selectedValue={selectedMinutes}
-                style={styles.picker}
-                onValueChange={(itemValue) => setSelectedMinutes(itemValue)}
-              >
-                {Array.from({ length: 61 }, (_, i) => (
-                  <Picker.Item key={i} label={`${i} mins`} value={i} />
-                ))}
-              </Picker>
-              <Picker
-                selectedValue={selectedSeconds}
-                style={styles.picker}
-                onValueChange={(itemValue) => setSelectedSeconds(itemValue)}
-              >
-                {Array.from({ length: 60 }, (_, i) => (
-                  <Picker.Item key={i} label={`${i} secs`} value={i} />
-                ))}
-              </Picker>
-            </View>
-            <View style={styles.modalButtonContainer}>
-              <Button title="Set Time" onPress={handleTimePick} color="#3498db" />
-              <Button title="Cancel" onPress={() => setIsPickerVisible(false)} color="#a9a9a9" />
-            </View>
-          </View>
-        </View>
-      </Modal>
+      <CustomTimerModal
+        isVisible={isPickerVisible}
+        selectedMinutes={selectedMinutes}
+        setSelectedMinutes={setSelectedMinutes}
+        selectedSeconds={selectedSeconds}
+        setSelectedSeconds={setSelectedSeconds}
+        handleTimePick={handleTimePick}
+        closeModal={() => setIsPickerVisible(false)}
+      />
     </KeyboardAvoidingView>
   );
 };
@@ -160,31 +122,6 @@ const styles = StyleSheet.create({
     borderRadius: 2.5,
     marginBottom: 15,
   },
-  taskInput: {
-    width: '80%',
-    padding: 8,
-    borderWidth: 1,
-    borderColor: '#8f8f8f',
-    borderRadius: 8,
-    color: '#333',
-    marginBottom: 10,
-    fontSize: 16,
-    textAlign: 'center',
-  },
-  pomodoroHeading: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 10,
-    marginTop: 5,
-    textAlign: 'center',
-  },
-  pomodoroContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: '80%',
-    marginBottom: 10,
-  },
   timeButton: {
     backgroundColor: '#3498db',
     padding: 10,
@@ -196,22 +133,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 15,
-    textAlign: 'center',
-  },
-  progressCircleContainer: {
-    position: 'relative',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  progressCircle: {
-    height: 170,
-    width: 170,
-  },
-  timerText: {
-    position: 'absolute',
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: '#333',
     textAlign: 'center',
   },
   buttonContainer: {
@@ -226,46 +147,6 @@ const styles = StyleSheet.create({
     color: '#4B4B4B',
     textAlign: 'center',
     fontWeight: 'bold',
-    marginTop: 10,
-  },
-  modalContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,0.7)',
-  },
-  modalContent: {
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    padding: 20,
-    alignItems: 'center',
-    width: '90%',
-  },
-  modalTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  modalSubtitle: {
-    fontSize: 14,
-    color: '#383838',
-    textAlign: 'center',
-  },
-  pickerContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
-    marginBottom: 10,
-  },
-  picker: {
-    height: 100,
-    width: 170,
-    color: '#383838',
-  },
-  modalButtonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '80%',
     marginTop: 10,
   },
 });
